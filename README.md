@@ -1,39 +1,37 @@
-<!--
-This is a template for datasets in the Fatiando a Terra collection.
+# Southern Africa - Ground-based gravity
 
-When adding a new dataset, fill out the information below. Search for all
-instances of "CHANGEME" and replace with the relevant information.
+This is a public domain compilation of ground measurements of gravity from
+Southern Africa.
+The observations are the absolute gravity values in mGal.
+The horizontal datum is not specified and heights are referenced to "sea
+level", which we will interpret as the geoid (which realization is likely not
+relevant since the uncertainty in the height is probably larger than geoid
+model differences).
 
-You probably also want to edit the conda environment.yml file to give the
-environment a new name and add/remove dependencies.
-
-You can delete this comment once done.
--->
-
-# Location - Data type
-
-CHANGEME: A few sentences about the dataset and a plot should go here.
-
-![CHANGEME: The alt text of the image.](preview.jpg)
+![Gravity measurements and their heights.](preview.jpg)
 
 | | Summary |
 |--:|:--|
-| File | `CHANGEME.csv` |
-| Size | CHANGEME Mb |
-| Version | [CHANGEME](https://github.com/fatiando-data/CHANGEME/releases/latest) |
-| DOI | https://doi.org/CHANGEME |
+| File | `southern-africa-gravity.csv.xz` |
+| Size | 0.14 Mb |
+| Version | [v1](https://github.com/fatiando-data/southern-africa-gravity/releases/latest) |
+| DOI | https://doi.org/10.5281/zenodo.5882430 |
 | License | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
-| MD5 | `md5:CHANGEME` |
-| SHA256 | `sha256:CHANGEME` |
-| Source | CHANGEME: Citation and/or link to original data source |
-| Original license | CHANGEME: License (with link) of the original source |
-| Processing code | [`prepare.ipynb`](https://nbviewer.org/github/fatiando-data/CHANGEME/blob/main/prepare.ipynb) |
+| MD5 | `md5:1dee324a14e647855366d6eb01a1ef35` |
+| SHA256 | `sha256:f5f8e5eb6cd97f104fbb739cf389113cbf28ca8ee003043fab720a0fa7262cac` |
+| Source | [NOAA NCEI](https://www.ngdc.noaa.gov/mgg/gravity/) |
+| Original license | [public domain](https://ngdc.noaa.gov/ngdcinfo/privacy.html) |
+| Processing code | [`prepare.ipynb`](https://nbviewer.org/github/fatiando-data/southern-africa-gravity/blob/main/prepare.ipynb) |
 
 ## Changes made
 
 > These are the changes made to the original dataset.
 
-* CHANGEME: List here changes made to the original data.
+* Keep only coordinates, absolute gravity, and the (sea-level) observation
+  height.
+* Remove some points below sea-level (a bit suspicious and are potentially
+  flawed heights from shipborne measurements).
+* Convert from a custom text format to compressed CSV.
 
 ## About this repository
 
